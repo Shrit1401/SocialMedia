@@ -1,6 +1,9 @@
 import React from 'react'
 import './sidebar.css'
-import { Rss, MessageSquare, PlayCircle, Users, Bookmark, HelpCircle, Briefcase, Calendar, BookOpen} from 'react-feather';
+import { Rss, MessageSquare, PlayCircle, User, Bookmark, HelpCircle, Briefcase, Calendar, BookOpen} from 'react-feather';
+import { Users } from '../../dummyData'
+import CloseFriend from '../closeFriend/CloseFriend';
+
 
 export default function Sidebar() {
   return (
@@ -20,7 +23,7 @@ export default function Sidebar() {
             <span className="sidebarListItemText">Videos</span>
           </li>
           <li className="sidebarListItem">
-            <Users className="sidebarIcon" />
+            <User className="sidebarIcon" />
             <span className="sidebarListItemText">Groups</span>
           </li>
           <li className="sidebarListItem">
@@ -48,10 +51,9 @@ export default function Sidebar() {
 
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-        <li className="sidebarFriend">
-          <img className="sidebarFriendImg" src="assets/person/7.jpeg" alt="" />
-          <span className="sidebarFriendName">Sam Mercy</span>
-        </li>
+        {Users.map((u) => (
+            <CloseFriend key={u.id} user={u} />
+          ))}
         </ul>
 
         </div>

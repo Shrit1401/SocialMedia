@@ -78,7 +78,7 @@
   .topbarIconBadge {
     width: 15px;
     height: 15px;
-    background-color: red;
+    background-color: #06346f;
     border-radius: 50%;
     color: white;
     position: absolute;
@@ -96,4 +96,5 @@
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+    border: 2px solid white;
   }
